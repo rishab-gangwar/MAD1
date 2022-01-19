@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Student Details</h1>
+    <div>
+        <table border="2" id="student-details-table">
+            <tr>
+                <th>Student Id</th>
+                <th>Course Id</th>
+                <th>Marks</th>
+            </tr>{% for item in student_info %}
+            <tr>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="2" style="text-align:center"> Total Marks </td>
+                <td>{{totalmarks}}</td>
+            </tr>
+        </table>
+    </div>
+    <div><br><br><br></div>
+    <div>
+        <a href="\">Go Back</a>
+    </div>
+</body>
+
+</html>
